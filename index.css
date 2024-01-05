@@ -1,0 +1,333 @@
+
+
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Tinos', serif;
+}
+
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background-color: FAF0E6;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  z-index: 100;
+  
+}
+
+.logo{
+  font-size: 32px;
+  color: 7B3F00;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+.navbar a {
+  position: relative;
+  font-size: 19px;
+  color: 7B3F00;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.navbar a::before{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: 7B3F00;
+  transition: .3s;
+}
+
+.navbar a:hover::before{
+  width: 100%;
+}
+
+.navbar button{
+  display: inline-block;
+  margin-left: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      color: FAF0E6;
+      background-color: #FFAC1C	;
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Inter', sans-serif;
+}
+
+.navbar button:hover{
+  background-color: #FFBF00	;
+      color: white;
+}
+
+.icons{
+  font-size: 2.8rem;
+  color: 7B3F00;
+  cursor: pointer;
+  display: none;
+}
+
+.interier{
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  height: 90%;
+}
+
+.interier img {
+  height: 100%;
+  width: 100%;
+}
+
+.napis1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.napis1 img{
+  height: 50vh;
+}
+
+.arrow{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow img{
+  height: 10vh;
+}
+
+.div2{
+  position: relative;
+  height: 125vh;
+  background-color: FFF6EC;
+}
+
+.div2 h1{
+  display: inline-block;
+  color: 7B3F00;
+  font-style: italic;
+}
+
+.div2 p{
+  color: 7B3F00;
+  font-style: italic;
+  
+}
+
+.skalyImg{
+  position: relative;
+  display: inline-block;
+  top: 20vh;
+  left: 30%;
+  height: 250px;
+  width: 400px;
+  border-radius: 20px;
+}
+
+.div2text1{
+
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+  width: 400px;
+  left: 20%;
+  top: 15vh;
+}
+
+.div2text1 h1{
+  font-size: 45px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.div2text1 p{
+  font-size: 20px;
+  text-align: justify;
+}
+
+.div2text2{
+  position: relative;
+  display: inline-block;
+  top: 68vh;
+  left: 3rem;
+  width: 300px;
+  
+}
+
+.div2text2 h1{
+  font-size: 45px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.div2text2 p{
+  font-size: 20px;
+  text-align: justify;
+}
+
+.hodiny{
+  position: relative;
+  right: 50%;
+  top: 70vh;
+  font-size: 18rem;
+  color: 7B3F00;
+}
+
+.div3{
+  position: relative;
+  height: 90%;
+  width: 100%;
+  background-color: #977043;
+  color: FFF6EC;
+  font-style: italic;
+}
+
+.div3 p{
+  position: relative;
+  top: 3%;
+  left: 10%;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+  width: 600px;
+  text-align: justify;
+}
+
+.div3 img{
+  position: relative;
+  left: 20%;
+  top: 8%;
+  height: 550px;
+  border-radius: 10%;
+}
+
+.div4{
+  position: relative;
+  height: 90%;
+  width: 100%;
+  background-color: FFF6EC;
+  color: 7B3F00;
+  font-style: italic;
+}
+
+.div4 h1{
+  position: relative;
+  display: block;
+  width: 600px;
+  top: 10%;
+  left: 10%;
+  font-size: 45px;
+}
+
+.div4 .mapa{
+  z-index: 2;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  display: inline-block;
+  width: 800px;
+}
+
+.div4 .kontakt{
+  position: relative;
+  top: 7%;
+  left: 5%;
+  display: inline-block;
+  font-size: 21px;
+}
+
+.background {
+  position: relative;
+}
+
+.background::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(napis2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+}
+
+.footer{
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-color: 7B3F00;
+  color: FFF6EC;
+  font-style: italic;
+}
+
+.footer h1{
+  padding-bottom: 20px;
+}
+
+.fLogo{
+  position: relative;
+  display: inline-block;
+  top: 23%;
+  left: 8%;
+}
+
+.fKontakt{
+  display: inline-block;
+  position: relative;
+  left: 18%;
+  top: 15%;
+}
+
+.fAdresa{
+  display: inline-block;
+  position: relative;
+  left: 28%;
+  top: 15%;
+}
+
+.fSoc{
+  display: inline-block;
+  position: relative;
+  left: 38%;
+  top: 5%;
+}
+
+.fSoc label{
+  color: FFF6EC;
+  font-size: 4rem;
+  padding: 10px;
+}
