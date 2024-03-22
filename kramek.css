@@ -1,0 +1,164 @@
+.hero {
+  position: relative;
+  width: 100%; /* Šířka podle potřeby /* Výška podle potřeby */
+  min-height: 91%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url("Images/kramek_header.png"); /* Změňte cestu na skutečnou cestu k obrázku */
+  background-size: cover; /* Pokud chcete, aby se obrázek přizpůsobil velikosti divu */
+  background-position: center; /* Nastaví obrázek do středu */
+}
+
+.hero_content {
+  max-width: 650px;
+  margin: 150px 100px;
+}
+
+.hero_content .info h2 {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.hero_content .info h2 span {
+  color: #faf0e6;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.hero_content .info p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff6ec;
+  color: #80461b;
+  padding-top: 3vw;
+}
+
+.container h1{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.container h2{
+  font-size: 33px;
+  font-weight: 600;
+  margin: 25px;
+}
+
+.flexbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #80461b;
+  padding-bottom: 25px;
+}
+
+.flexbox div{
+  padding: 2vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2vw;
+  background: #FAF0E6;
+  width: 400px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.flexbox div p{
+  letter-spacing: 1px;
+  font-size: 17px; 
+  font-weight: 550;
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 50px 0;
+    background: #FAF0E6;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #e2dac6);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #e2dac6);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 100px;
+    margin: 0 40px;
+  }
+
+  @media only screen and (max-width: 769px) {
+    .hero_content .info h2{
+      font-size: 45px;
+      line-height: 50px;
+    }
+  
+    .hero_content .info h2 span{
+      font-size: 40px;
+      font-weight: 600;
+    }
+  
+    .hero_content .info p{
+      font-size: 14px;
+    }
+
+    .flexbox div{
+      height: 200px;
+      width: 350px;
+    }
+    
+    .flexbox div p{
+      font-size: 14px;
+    }
+  }
