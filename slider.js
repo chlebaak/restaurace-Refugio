@@ -1,68 +1,79 @@
-const initSlider = () => {
-    const imageList = document.querySelector(".slider-wrapper .image-list");
-    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
-    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-    
-    // Handle scrollbar thumb drag
-    scrollbarThumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = scrollbarThumb.offsetLeft;
-        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-        
-        // Update thumb position on mouse move
-        const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
+document.querySelectorAll('.container_slider').forEach(container => {
+    const carousel = container.querySelector('.carousel'),
+        firstImg = carousel.querySelector('img'),
+        arrowIcons = container.querySelectorAll('i');
 
-            // Ensure the scrollbar thumb stays within bounds
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-            
-            scrollbarThumb.style.left = `${boundedPosition}px`;
-            imageList.scrollLeft = scrollPosition;
-        }
+    let isDragStart = false,
+        isDragging = false,
+        prevPageX,
+        prevScrollLeft,
+        positionDiff;
 
-        // Remove event listeners on mouse up
-        const handleMouseUp = () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp);
-        }
+    const showHideIcons = () => {
+        // showing and hiding prev/next icon according to carousel scroll left value
+        let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+        arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+        arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+    }
 
-        // Add event listeners for drag interaction
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
-
-    // Slide images according to the slide button clicks
-    slideButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const direction = button.id === "prev-slide" ? -1 : 1;
-            const scrollAmount = imageList.clientWidth * direction;
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
+            // if clicked icon is left, reduce width value from the carousel scroll left else add to it
+            carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+            setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
         });
     });
 
-     // Show or hide slide buttons based on scroll position
-    const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    const autoSlide = () => {
+        // if there is no image left to scroll then return from here
+        if (carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+
+        positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+        let firstImgWidth = firstImg.clientWidth + 14;
+        // getting difference value that needs to add or reduce from carousel left to take middle img center
+        let valDifference = firstImgWidth - positionDiff;
+
+        if (carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
+            return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+        }
+        // if user is scrolling to the left
+        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     }
 
-    // Update scrollbar thumb position based on image scroll
-    const updateScrollThumbPosition = () => {
-        const scrollPosition = imageList.scrollLeft;
-        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `${thumbPosition}px`;
+    const dragStart = (e) => {
+        // updatating global variables value on mouse down event
+        isDragStart = true;
+        prevPageX = e.pageX || e.touches[0].pageX;
+        prevScrollLeft = carousel.scrollLeft;
     }
 
-    // Call these two functions when image list scrolls
-    imageList.addEventListener("scroll", () => {
-        updateScrollThumbPosition();
-        handleSlideButtons();
-    });
-}
+    const dragging = (e) => {
+        // scrolling images/carousel to left according to mouse pointer
+        if (!isDragStart) return;
+        e.preventDefault();
+        isDragging = true;
+        carousel.classList.add("dragging");
+        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+        carousel.scrollLeft = prevScrollLeft - positionDiff;
+        showHideIcons();
+    }
 
-window.addEventListener("resize", initSlider);
-window.addEventListener("load", initSlider);
+    const dragStop = () => {
+        isDragStart = false;
+        carousel.classList.remove("dragging");
+
+        if (!isDragging) return;
+        isDragging = false;
+        autoSlide();
+    }
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("touchstart", dragStart);
+
+    document.addEventListener("mousemove", dragging);
+    carousel.addEventListener("touchmove", dragging);
+
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("touchend", dragStop);
+});

@@ -10,31 +10,50 @@ body {
   min-height: 100vh;
 }
 
-.uvod {
+.opacity{
+  opacity: 1; 
+  transition: opacity 0.8s ease; 
+  z-index: 2;
+}
+
+.hero {
   position: relative;
+  width: 100%; 
+  min-height: 91%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url("Images/restaurace_hero.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
 }
 
-.img_fluid {
-  width: 100%;
-  height: auto;
+.hero_content {
+  max-width: 650px;
+  margin: 150px 100px;
 }
 
-.uvod div {
-  position: absolute;
-  top: 13vw;
-  left: 10vw;
-}
-
-.uvod div h1 {
+.hero_content .info h2 {
   color: white;
-  font-size: 7.5vw;
-  margin: 20;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
 }
 
-.uvod div p {
+.hero_content .info h2 span {
+  color: #faf0e6;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.hero_content .info p {
   color: white;
-  font-size: 2.5vw;
-  margin: 20;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .div2 {
@@ -56,7 +75,9 @@ body {
 }
 
 .flex_container div {
-  background-color: #e3dac9;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+  background-color: #fff6ec;
   z-index: 2;
   text-align: center;
   border-radius: 20px;
@@ -103,6 +124,25 @@ div.text2 {
   height: 175px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .hero_content {
+    margin: 150px 50px;
+  }
+  .hero_content .info h2{
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .hero_content .info h2 span{
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .hero_content .info p{
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .flex_container div {
     margin-left: 20px;
@@ -128,8 +168,8 @@ div.text2 {
 
 .menu {
   position: relative;
-  color: #fff6ec;
-  background-color: #977043;
+  color: #7B3F00;
+  background-color: #fff6ec;
   text-align: center;
 }
 
@@ -223,7 +263,7 @@ div.text2 {
 .rezervace {
   position: relative;
   width: 100%;
-  background-color: #fff6ec;
+  background-color: #faf0e6;
   color: 7B3F00;
   display: flex;
   text-align: center;

@@ -1,82 +1,81 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Refugio</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
-    <meta charset="UTF-8" />
-    <meta name="description" content="Restaurace a ubytování Tisá Refugio" />
-    <meta
-      name="keywords"
-      content="Refugio, restaurace Tisá, ubytování Tisá, kavárna Tisá, Refugio Tisá, krámek Tisá, horolezectví Tisá"
-    />
-    <meta name="author" content="Jan Fiala" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Tinos&display=swap");
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="logo">Refugio</div>
-      <input type="checkbox" id="nav_check" hidden />
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html" class="active">Hlavní stránka</a>
-          </li>
-          <li>
-            <a href="restaurace.html">Restaurace</a>
-          </li>
-          <li>
-            <a href="ubytovani.html">Ubytování</a>
-          </li>
-          <li>
-            <a href="kramek.html">Krámek</a>
-          </li>
-          <li>
-            <a href="aktuality.html">Aktuality</a>
-          </li>
-          <button>CZ/DE</button>
-        </ul>
-      </nav>
-      <label for="nav_check" class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
-    </header>
-    <div class="interier">
-      <img src="Images/coffee(1).jpg" alt="" />
-      <div class="napis1">
-        <img src="Images/napis1.png" alt="" />
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refugio</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Restaurace a ubytování Tisá Refugio" />
+  <meta name="keywords"
+    content="Refugio, restaurace Tisá, ubytování Tisá, kavárna Tisá, Refugio Tisá, krámek Tisá, horolezectví Tisá" />
+  <meta name="author" content="Jan Fiala" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Tinos&display=swap");
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Refugio</div>
+    <input type="checkbox" id="nav_check" hidden />
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active" data-key="home">Hlavní stránka</a>
+        </li>
+        <li>
+          <a href="restaurace.html" data-key="restaurant">Restaurace</a>
+        </li>
+        <li>
+          <a href="ubytovani.html" data-key="accommodation">Ubytování</a>
+        </li>
+        <li>
+          <a href="kramek.html" data-key="shop">Krámek</a>
+        </li>
+        <li>
+          <a href="aktuality.php" data-key="news">Aktuality</a>
+        </li>
+        <button id="change-lang">CZ/DE</button>
+      </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
+
+  <div class="hero">
+    <div class="hero_content">
+      <img src="Images/napis1.png" alt="">
     </div>
-    <div class="background">
-      <div class="div2">
-        <div class="flex_container">
-          <div>
-            <h1>Vítejte v Refugiu</h1>
-            <p>
+  </div>
+  <div class="background">
+    <div class="div2">
+      <div class="flex_container opacity">
+        <div>
+          <h2 data-key="welcome">Vítejte v Refugiu</h1>
+            <p data-key="welcome_text">
               REFUGIO se nachází v překrásné přírodě Labských pískovců na
               samotné hranici národního parku České Švýcarsko. <br />
               Leží přímo pod skalními masívy v obci Tisá.
             </p>
-          </div>
-          <div>
-            <img src="Images/skaly.jpg" alt="" />
-          </div>
-          <div>
-            <img src="Images/ALA_3638.jpg" alt="" />
-          </div>
-          <div>
-            <h1>Otevírací doba</h1>
-            <p>
+        </div>
+        <div>
+          <img src="Images/skaly.jpg" alt="" />
+        </div>
+        <div>
+          <img src="Images/ALA_3638.jpg" alt="" />
+        </div>
+        <div>
+          <h2 data-key="opening_hours">Otevírací doba</h1>
+            <p data-key="opening_hours_text">
               Pondělí: 9:00 - 21:00 <br />
               Úterý: Zavřeno <br />
               Středa: 9:00 - 21:00 <br />
@@ -85,124 +84,171 @@
               Sobota: 9:00 - 22:00 <br />
               Neděle: 9:00 - 21:00
             </p>
-          </div>
-        </div>
-      </div>
-      <div class="div3">
-        <div class="row">
-          <div class="left">
-            <div class="content">
-              <h1>O nás</h1>
-              <p>
-                Nabízíme ubytování, kavárnu s nekuřáckou reastaurací a outdoor
-                shop, kde naleznete vše potřebné pro horolezectví, turistiku a
-                veškeré aktivity v přírodě.
-              </p>
-              <p>
-                Obec Tisá je rájem horolezců, cyklistů, běžkařů, turistů i
-                lyžařů.
-              </p>
-              <p>Horolezcům zdejší oblast snad ani není třeba představovat.</p>
-              <p>
-                Zájemci o turistiku nebo cykloturistiku v okolí Tisé či Českém
-                Švýcarsku si mohou zapůjčit kolo a využít mnoho turstických cest
-                i cyklotras u nás i v nedalekém Německu.
-              </p>
-              <p>
-                Sjednat si průvodce pro sportovní a adrenalinové aktivity,
-                případně pro běžnou turistiku, také není žádný problém.
-              </p>
-              <p>
-                V zimních měsících je v obci Tisá v provozu lyžařský vlek nebo
-                lze navštívit nedaleký SKI areál Zadní Telnice v Krušných
-                horách. Běžkaři se mohou sklouznout na českých i německých
-                udržovaných trasách.
-              </p>
-              <p>
-                Obec se nachází 15 - 30 minut autem od Děčína, Teplic a Ústí nad
-                Labem, je 4 km od sjezdu na Petrovice z dálnice D8
-              </p>
-            </div>
-          </div>
-
-          <div class="right">
-            <img src="Images/citron.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="div4">
-        <div class="row2">
-          <div class="left2">
-            <p class="mapa">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.4465016319386!2d14.027147176577065!3d50.78583327165811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470999b72c037ba5%3A0x235eb98fe65269cc!2sRefugio!5e0!3m2!1scs!2scz!4v1701334046539!5m2!1scs!2scz"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </p>
-          </div>
-          <div class="right2">
-            <div class="content2">
-              <h1>Jak se k nám dostanete</h1>
-              <p class="kontakt">
-                <strong>Refugio s.r.o. </strong><br />
-                GPS: 50° 47´ 8" N, 14° 1´ 47" E <br />
-                <br />
-
-                <strong>Adresa</strong><br />
-                Refugio s.r.o., Tisá 473, 403 36, Tisá <br />
-                <br />
-
-                <strong>Odpovědný vedoucí</strong><br />
-                Jindřich Beneš<br />
-                <br />
-
-                <strong>Telefon pro dotazy:</strong><br />
-                + 420 702 017 774 <br />
-                + 420 724 166 693 <br />
-                <br />
-
-                <strong>E-mail pro rezervace:</strong><br />
-                refugio@seznam.cz
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="footerCon">
-        <div>
-          <img src="Images/logo.png" alt="" />
+
+    <div class="about-section">
+      <div class="about-content">
+        <div class="about-image opacity" style="background-image: url(Images/citron.jpg);">
         </div>
-        <div>
-          <h6>Kontakt</h6>
-          <ul>
-            <li><strong>Telefon</strong></li>
-            <li>+ 420 702 017 774</li>
-            <li>+ 420 724 166 693</li>
-            <li><strong>E-mail</strong></li>
-            <li>refugio@seznam.cz</li>
-          </ul>
-        </div>
-        <div>
-          <h6>Adresa</h6>
-          <ul>
-            <li>Restaurace a Penzion "Refugio"</li>
-            <li>Tisá 473</li>
-            <li>403 36 Tisá</li>
-          </ul>
-        </div>
-        <div>
-          <h6>Socialní sítě</h6>
-          <label for=""><i class="bx bxl-facebook-circle"></i></label>
-          <label for=""><i class="bx bxl-instagram"></i></label>
+        <div class="about-text opacity">
+          <h2 data-key="about_us">O nás</h2>
+          <p data-key="about_us_text">Nabízíme ubytování, kavárnu a outdoorový obchod pro horolezectví, turistiku a
+            další outdoorové aktivity. Tisá je rájem pro horolezce, cyklisty, běžkaře a turisty. Máme pohodlné pokoje a
+            apartmány, kde si můžete odpočinout po náročném dni v přírodě.<br><br>
+
+            Naše kavárna nabízí výbornou kávu, čerstvé dezerty a příjemné posezení. Pro horolezce, turisty a cyklisty
+            máme široký výběr vybavení. Můžete si u nás půjčit kolo a využít mnoho tras jak u nás, tak v nedalekém
+            Německu.<br><br>
+
+            Chcete-li si užít krásy okolní přírody, není problém sjednat průvodce pro sportovní aktivity či turistiku. V
+            zimě můžete navštívit lyžařský vlek v Tisé nebo SKI areál Zadní Telnice. Běžkaři mají k dispozici udržované
+            trasy v Českém Švýcarsku i v Německu.<br><br>
+
+            Naše obec je vzdálená 15–30 minut jízdy od Děčína, Teplic a Ústí nad Labem, a 4 km od sjezdu Petrovice z
+            dálnice D8.<br>
+
+          </p>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+
+
+    <div class="services_container">
+      <div class="services_flex opacity">
+
+        <div class="card" style="background-image: url(Images/index_restaurace.png);">
+
+        </div>
+        <div class="card" style="background-image: url(Images/index_hotel.png);">
+
+        </div>
+
+        <div class="card" style="background-image: url(Images/index_kramek.png);">
+
+        </div>
+        <div class="card" style="background-image: url(Images/index_news.png);">
+
+        </div>
+
+      </div>
+    </div>
+    <div class="kontakt-section">
+      <div class="kontakt-wrapper">
+        <div class="kontakt-content opacity">
+
+          <h3 data-key="how_to_reach_us">Jak se k nám dostanete</h3>
+            <p class="kontakt" data-key="contact_info">
+              <strong>Refugio s.r.o. </strong><br />
+              GPS: 50° 47´ 8" N, 14° 1´ 47" E <br />
+              <br />
+
+              <strong>Adresa</strong><br />
+              Refugio s.r.o., Tisá 473, 403 36, Tisá <br />
+              <br />
+
+              <strong>Odpovědný vedoucí</strong><br />
+              Jindřich Beneš<br />
+              <br />
+
+              <strong>Telefon pro dotazy:</strong><br />
+              + 420 702 017 774 <br />
+              + 420 724 166 693 <br />
+              <br />
+
+              <strong>E-mail pro rezervace:</strong><br />
+              refugio@seznam.cz
+            </p>
+
+        </div>
+        <div class="kontakt-mapa opacity">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.4465016319386!2d14.027147176577065!3d50.78583327165811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470999b72c037ba5%3A0x235eb98fe65269cc!2sRefugio!5e0!3m2!1scs!2scz!4v1701334046539!5m2!1scs!2scz"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footerCon">
+      <div>
+        <img src="Images/logo.png" alt="" />
+      </div>
+      <div>
+        <h6 data-key="contact">Kontakt</h6>
+        <ul>
+          <li><strong>Telefon</strong></li>
+          <li>+ 420 702 017 774</li>
+          <li>+ 420 724 166 693</li>
+          <li><strong>E-mail</strong></li>
+          <li>refugio@seznam.cz</li>
+        </ul>
+      </div>
+      <div>
+        <h6 data-key="address">Adresa</h6>
+        <ul>
+          <li>Restaurace a Penzion "Refugio"</li>
+          <li>Tisá 473</li>
+          <li>403 36 Tisá</li>
+        </ul>
+      </div>
+      <div>
+        <h6 data-key="social_media">Socialní sítě</h6>
+        <label for=""><i class="bx bxl-facebook-circle"></i></label>
+        <label for=""><i class="bx bxl-instagram"></i></label>
+      </div>
+    </div>
+  </footer>
+  <script src="opacity.js"></script>
+  <script>
+    var lastScrollTop = 0;
+    var scale = 1;
+
+    window.addEventListener("scroll", function () {
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollDelta = st - lastScrollTop;
+
+      // Koeficient změny velikosti
+      var scaleFactor = 0.0006; // Můžete upravit podle potřeby
+
+      scale += scrollDelta * scaleFactor;
+
+      // Minimální a maximální měřítko
+      scale = Math.max(1, Math.min(1.3, scale));
+
+      // Plynulá změna velikosti
+      document.querySelector('.hero').style.transform = "scale(" + scale + ")";
+      document.querySelector('.hero_content').style.transform = "scale(1)"; // Resetování velikosti kontejneru
+
+      // Rozmazání obrázku
+      var blurAmount = 5; // Můžete upravit podle potřeby
+      var blurFactor = Math.abs(scrollDelta) * 1; // Můžete upravit podle potřeby
+      blurFactor = Math.min(blurFactor, blurAmount); // Omezíme maximální rozmazání
+      if (scrollDelta > 0) {
+        // Dolů - rozmazat obrázek s plynulým přechodem
+        document.querySelector('.hero_content img').style.filter = "blur(" + blurFactor + "px)";
+        document.querySelector('.hero_content img').style.transition = "filter 0.3s ease"; // Plynulý přechod
+      } else {
+        // Nahoru - odmazat obrázek s plynulým přechodem
+        document.querySelector('.hero_content img').style.filter = "blur(0)";
+        document.querySelector('.hero_content img').style.transition = "filter 0.3s ease"; // Plynulý přechod
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
+
+
+
+
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="translate.js"></script>
+
+</body>
+
 </html>
