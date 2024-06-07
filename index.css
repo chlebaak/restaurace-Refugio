@@ -213,6 +213,7 @@ footer {
   color: FFF6EC;
   font-size: 4rem;
   padding: 5px;
+  cursor: pointer;
 }
 
 .footerCon div img {

@@ -21,21 +21,6 @@ header nav ul {
   display: flex;
 }
 
-/*header nav ul button {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #7b3f00;
-  background: #7b3f00;
-  color: #fff6ec;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: 0.8s;
-}
-header nav ul button:hover {
-  color: #7b3f00;
-  background: #fff6ec;
-}*/
 
 header nav ul button {
   align-items: center;

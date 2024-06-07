@@ -138,16 +138,12 @@ if (!isset($_SESSION['username'])) {
 
       $conn = new mysqli($servername, $username, $password, $database, $port);
 
-      // Zjistění aktuálního řazení
       $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : 'DESC';
 
-      // SQL dotaz s proměnnou pro řazení
       $sql = "SELECT * FROM aktuality ORDER BY created_at $sortOrder;";
       $result = $conn->query($sql);
 
-      // Zobrazení výsledků
       if ($result->num_rows > 0) {
-        // Výpis údajů pro každou aktualitu
         while ($row = $result->fetch_assoc()) {
           echo '<div class="container">
                 <div class="img">
@@ -164,7 +160,6 @@ if (!isset($_SESSION['username'])) {
         }
       }
 
-      // Uzavření spojení s databází
       $conn->close();
       ?>
 
@@ -217,12 +212,12 @@ if (!isset($_SESSION['username'])) {
 
     adminBtn.addEventListener('click', () => {
       loginFormWrapper.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Disable scrolling
+      document.body.style.overflow = 'hidden'; 
     });
 
     function closeLoginForm() {
       loginFormWrapper.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Enable scrolling
+      document.body.style.overflow = 'auto';
     }
 
     window.addEventListener('click', (event) => {
