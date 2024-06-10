@@ -11,7 +11,7 @@ if (!isset($_SESSION['username'])) {
 
 
 
-<html lang="en">
+<html lang="cz">
 
 <head>
   <meta charset="UTF-8" />
@@ -42,7 +42,7 @@ if (!isset($_SESSION['username'])) {
           <a href="index.html" data-key="home">Hlavní stránka</a>
         </li>
         <li>
-          <a href="restaurace.html" class="active" data-key="restaurant">Restaurace</a>
+          <a href="restaurace.html" data-key="restaurant">Restaurace</a>
         </li>
         <li>
           <a href="ubytovani.html" data-key="accommodation">Ubytování</a>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
           <a href="kramek.html" data-key="shop">Krámek</a>
         </li>
         <li>
-          <a href="aktuality.php" data-key="news">Aktuality</a>
+          <a href="aktuality.php" data-key="news" class="active">Aktuality</a>
         </li>
         <li>
           <button id="change-lang">CZ/DE</button>
@@ -111,17 +111,14 @@ if (!isset($_SESSION['username'])) {
 
     </div>
 
-
-
-
     <div id="loginFormWrapper" class="login-form-wrapper">
       <div id="loginForm" class="login-form">
         <span class="close" onclick="closeLoginForm()">&times;</span>
         <h2>Admin Login</h2>
         <div>
           <form method="post" action="login.php">
-            <input type="text" id="username" name="username" placeholder="username"><br>
-            <input type="password" id="password" name="password" placeholder="password"><br><br>
+            <input type="text" id="username" name="username" placeholder="username" required><br>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br>
             <input type="submit" value="Login">
           </form>
         </div>
@@ -164,9 +161,6 @@ if (!isset($_SESSION['username'])) {
 
       $conn->close();
       ?>
-
-
-
     </div>
 
 
@@ -202,8 +196,8 @@ if (!isset($_SESSION['username'])) {
       </div>
       <div>
         <h6 data-key="social_media">Sociální sítě</h6>
-        <label><i class="bx bxl-facebook-circle"></i></label>
-        <label><i class="bx bxl-instagram"></i></label>
+        <label for="" onclick="location.href='https://www.instagram.com/refugio.tisa/'"><i class="bx bxl-facebook-circle"></i></label>
+        <label for="" onclick="location.href='https://www.facebook.com/refugio.eshop/'"><i class="bx bxl-instagram"></i></label>
       </div>
     </div>
   </footer>

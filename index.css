@@ -54,6 +54,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   position: relative;
   border-radius: 10px;
+  padding: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 5rem;
@@ -307,6 +308,7 @@ body {
     display: flex;
     background-color: #faf0e6;
     justify-content: center;
+    padding: 20px;
   }
 }
 

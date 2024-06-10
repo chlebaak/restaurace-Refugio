@@ -28,7 +28,7 @@ body {
   display: inline;
   font-size: 3rem;
   margin: 20px;
-  margin-top: 150px;
+  margin-top: 12rem;
 }
 
 
@@ -195,6 +195,7 @@ body {
   border: 1px solid #ccc;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    cursor: pointer;
 }
 
 .aktuality .img {
@@ -379,9 +380,15 @@ body {
   }
 
   .header h2 {
-    margin-top: 300px;
+    margin-top: 20rem;
     font-size: 2rem;
   }
+
+  .aktuality .img{
+    max-width: 500px;
+  }
+
+  
 
 }
 
@@ -391,7 +398,7 @@ body {
     margin: 10px;
   }
   .header h2 {
-    margin-top: 250px;
+    margin-top: 19rem;
   }
 
   .sort {
@@ -401,5 +408,10 @@ body {
   .aktuality {
     margin: 10px;
   }
+
+  .aktuality .img{
+    max-width: 300px;
+  }
+
 
 }
