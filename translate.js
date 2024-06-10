@@ -105,6 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "Nenechte se zaskočit žádnou výzvou přírody. S naším vybavením a oblečením se stanete neohroženými dobrodruhy, kteří jsou připraveni vzdorovat větru i dešti a objevovat krásy divočiny s maximálním komfortem a bezpečností. Navštivte nás ještě dnes a připravte se na svou další nezapomenutelnou dobrodružnou cestu!",
       brands_title: "Jaké značky u nás najdete?",
       // Aktuality
+      aktuality_header: "Aktuality",
+      aktuality_header2: "Co se děje v Refugiu?",
+      sort: "Seřadit podle",
+      by_date: "Datumu",
     },
     de: {
       // Hlavní stránka
@@ -128,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       service_news: "Neuigkeiten",
       restaurantClick: "Images/index_restaurace_de.png",
       accommodationClick: "Images/index_hotel_de.png",
-      shopClick: "Images/index_kramek _de.png",
+      shopClick: "Images/index_kramek_de.png",
       newsClick: "Images/index_news_de.png",
       how_to_reach_us: "Wie Sie uns erreichen",
       contact_info:
@@ -178,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Preise für Aufenthalte sind bei den einzelnen Zimmern angegeben.",
       deposit: "Anzahlung",
       deposit_description:
-        "Eine nicht erstattungsfähige Anzahlung in Höhe von 50% des Gesamtpreises ist spätestens 30 Tage vor Ihrer Ankunft fällig.",
+        "Eine nicht rückzahlbare Anzahlung von 50 % des Gesamtpreises ist bis 30 Tage vor Ihrer Ankunft zu leisten.",
       apartment: "Apartment",
       apartment_description:
         "In der neu renovierten Wohnung bieten wir Ihnen zwei separate Schlafzimmer und die Möglichkeit eines Zustellbetts auf einem Schlafsofa, einen Fernseher, eine ausgestattete Küchenzeile, einen Essbereich, ein separates Badezimmer mit Badewanne und Dusche, eine Toilette, eine Waschmaschine.",
@@ -214,6 +218,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "Lassen Sie sich von keiner Herausforderung der Natur überraschen. Mit unserer Ausrüstung und Kleidung werden Sie zu furchtlosen Abenteurern, die bereit sind, Wind und Regen zu trotzen und die Schönheit der Wildnis mit maximalem Komfort und Sicherheit zu entdecken. Besuchen Sie uns noch heute und bereiten Sie sich auf Ihre nächste unvergessliche Abenteuerreise vor!",
       brands_title: "Welche Marken finden Sie bei uns?",
       // Aktuality
+      aktuality_header: "Nachrichten",
+      aktuality_header2: "Was ist in Refugio los?",
+      sort: "Sortieren nach",
+      by_date: "Datum",
     },
   };
 
@@ -230,17 +238,16 @@ document.addEventListener("DOMContentLoaded", function () {
         $(this).html(translations[language][key]);
       }
     });
+    localStorage.setItem("preferredLanguage", language);
   }
 
-  // Automatická detekce jazyka
   var userLang = navigator.language || navigator.userLanguage;
-  var defaultLang = userLang.startsWith("de") ? "de" : "cs";
+  var savedLang = localStorage.getItem("preferredLanguage");
+  var defaultLang = savedLang || (userLang.startsWith("de") ? "de" : "cs");
   setLanguage(defaultLang);
 
-  // Uložíme aktuální jazyk do proměnné
   var currentLang = defaultLang;
 
-  // Přepínání jazyků
   $("#change-lang").click(function () {
     currentLang = currentLang === "cs" ? "de" : "cs";
     setLanguage(currentLang);

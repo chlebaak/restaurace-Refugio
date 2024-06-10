@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 
 $servername = "db.bagros.eu";
-      $username = "zub";
-      $password = "tajnyZub";
-      $database = "zubDB";
-      $port = 8100;
+$username = "zub";
+$password = "tajnyZub";
+$database = "zubDB";
+$port = 8100;
 
 $conn = new mysqli($servername, $username, $password, $database, $port);
 
@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nazev = $_POST["nazev"];
 
     $obrazek_path = "";
-    if(isset($_FILES["obrazek"]) && $_FILES["obrazek"]["error"] == 0) {
+    if (isset($_FILES["obrazek"]) && $_FILES["obrazek"]["error"] == 0) {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["obrazek"]["name"]);
-        if(move_uploaded_file($_FILES["obrazek"]["tmp_name"], $target_file)) {
+        if (move_uploaded_file($_FILES["obrazek"]["tmp_name"], $target_file)) {
             $obrazek_path = $target_file;
         } else {
             echo "Nahrání souboru selhalo.";
@@ -44,5 +44,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-
-?>

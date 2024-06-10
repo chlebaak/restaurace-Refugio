@@ -1,19 +1,19 @@
-.opacity{
-  opacity: 1; 
-  transition: opacity 0.8s ease; 
+.opacity {
+  opacity: 1;
+  transition: opacity 0.8s ease;
   z-index: 2;
 }
 
 .hero {
   position: relative;
-  width: 100%; /* Šířka podle potřeby /* Výška podle potřeby */
+  width: 100%;
   min-height: 91%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url("Images/kramek_header.png"); /* Změňte cestu na skutečnou cestu k obrázku */
-  background-size: cover; /* Pokud chcete, aby se obrázek přizpůsobil velikosti divu */
-  background-position: center; /* Nastaví obrázek do středu */
+  background-image: url("Images/kramek_header.png");
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -52,7 +52,7 @@
 
 .background::before {
   content: "";
-  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -65,7 +65,7 @@
   z-index: 1;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,14 +76,14 @@
   padding-top: 3vw;
 }
 
-.container h1{
+.container h1 {
   z-index: 2;
   font-size: 35px;
   font-weight: 700;
   padding: 20px;
 }
 
-.container h2{
+.container h2 {
   z-index: 2;
   font-size: 33px;
   font-weight: 600;
@@ -91,7 +91,7 @@
   padding: 20px;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@
   z-index: 2;
 }
 
-.flexbox div{
+.flexbox div {
   z-index: 2;
   padding: 2vw;
   display: flex;
@@ -109,95 +109,95 @@
   align-items: center;
   border-radius: 10px;
   margin: 2vw;
-  background: #FAF0E6;
+  background: #faf0e6;
   width: 400px;
   height: 250px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
-.flexbox div p{
+.flexbox div p {
   letter-spacing: 1px;
-  font-size: 17px; 
+  font-size: 17px;
   font-weight: 550;
 }
 
 @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
   }
-  
-  .logos {
-    z-index: 2;
-    overflow: hidden;
-    padding: 50px 0;
-    background: #FAF0E6;
-    white-space: nowrap;
-    position: relative;
+  to {
+    transform: translateX(-100%);
   }
-  
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
-  
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #e2dac6);
-  }
-  
-  .logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #e2dac6);
-  }
-  
-  .logos:hover .logos-slide {
-    animation-play-state: paused;
-  }
-  
-  .logos-slide {
-    display: inline-block;
-    animation: 35s slide infinite linear;
-  }
-  
-  .logos-slide img {
-    height: 100px;
-    margin: 0 40px;
+}
+
+.logos {
+  z-index: 2;
+  overflow: hidden;
+  padding: 50px 0;
+  background: #faf0e6;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #e2dac6);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #e2dac6);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
+
+@media only screen and (max-width: 769px) {
+  .hero_content {
+    margin: 100px 50px;
   }
 
-  @media only screen and (max-width: 769px) {
-    .hero_content{
-      margin: 100px 50px;
-    }
-
-    .hero_content .info h2{
-      font-size: 40px;
-      line-height: 50px;
-    }
-  
-    .hero_content .info h2 span{
-      font-size: 40px;
-      font-weight: 600;
-    }
-  
-    .hero_content .info p{
-      font-size: 14px;
-    }
-
-    .flexbox div{
-      height: 200px;
-      width: 350px;
-    }
-    
-    .flexbox div p{
-      font-size: 14px;
-    }
+  .hero_content .info h2 {
+    font-size: 40px;
+    line-height: 50px;
   }
+
+  .hero_content .info h2 span {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .hero_content .info p {
+    font-size: 14px;
+  }
+
+  .flexbox div {
+    height: 200px;
+    width: 350px;
+  }
+
+  .flexbox div p {
+    font-size: 14px;
+  }
+}

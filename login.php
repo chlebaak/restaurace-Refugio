@@ -3,10 +3,10 @@ session_start();
 
 
 $servername = "db.bagros.eu";
-      $username = "zub";
-      $password = "tajnyZub";
-      $database = "zubDB";
-      $port = 8100;
+$username = "zub";
+$password = "tajnyZub";
+$database = "zubDB";
+$port = 8100;
 
 $conn = new mysqli($servername, $username, $password, $database, $port);
 
@@ -16,7 +16,8 @@ if ($conn->connect_error) {
     echo "Připojení k databázi proběhlo úspěšně.";
 }
 
-function login($username, $password, $conn) {
+function login($username, $password, $conn)
+{
     $stmt = $conn->prepare("SELECT * FROM admin WHERE name=? AND password_hash = PASSWORD(?)");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
@@ -42,6 +43,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-
-
-?>

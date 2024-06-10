@@ -2,7 +2,7 @@
 session_start();
 
 
-// Pokud uživatel není přihlášený, přesměrujeme ho na stránku pro přihlášení
+
 if (!isset($_SESSION['username'])) {
 } else {
   $admin = $_SESSION['username'];
@@ -34,26 +34,28 @@ if (!isset($_SESSION['username'])) {
 
 <body>
   <header>
-    <div class="logo">Refugio</div>
+    <div class="logo" data-key="logo">Refugio</div>
     <input type="checkbox" id="nav_check" hidden />
     <nav>
       <ul>
         <li>
-          <a href="index.html">Hlavní stránka</a>
+          <a href="index.html" data-key="home">Hlavní stránka</a>
         </li>
         <li>
-          <a href="restaurace.html">Restaurace</a>
+          <a href="restaurace.html" class="active" data-key="restaurant">Restaurace</a>
         </li>
         <li>
-          <a href="ubytovani.html">Ubytování</a>
+          <a href="ubytovani.html" data-key="accommodation">Ubytování</a>
         </li>
         <li>
-          <a href="kramek.html">Krámek</a>
+          <a href="kramek.html" data-key="shop">Krámek</a>
         </li>
         <li>
-          <a href="aktuality.html" class="active">Aktuality</a>
+          <a href="aktuality.php" data-key="news">Aktuality</a>
         </li>
-        <button>CZ/DE</button>
+        <li>
+          <button id="change-lang">CZ/DE</button>
+        </li>
       </ul>
     </nav>
     <label for="nav_check" class="hamburger">
@@ -65,15 +67,15 @@ if (!isset($_SESSION['username'])) {
 
 
   <div class="header">
-    <h1>Aktuality</h1>
-    <h2>Co se děje v Refugiu?</h2>
+    <h1 data-key="aktuality_header">Aktuality</h1>
+    <h2 data-key="aktuality_header2">Co se děje v Refugiu?</h2>
   </div>
 
   <div class="background">
 
 
-  <?php if (isset($admin)) {
-    echo '   <div id="upload_form">
+    <?php if (isset($admin)) {
+      echo '   <div id="upload_form">
         <h2>Nahrát aktualitu</h2>
         <div>
             <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -90,13 +92,13 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
     ';
-} ?>
+    } ?>
 
     <div class="sort">
       <div>
-        <p>Seřadit podle: </p>
+        <p data-key="sort">Seřadit podle: </p>
 
-        <button onclick="changeSortOrder()">Datumu</button>
+        <button onclick="changeSortOrder()" data-key="by_date">Datumu</button>
       </div>
       <?php if (isset($admin)) {
         echo '<form action="logout.php" method="post">
@@ -138,7 +140,7 @@ if (!isset($_SESSION['username'])) {
 
       $conn = new mysqli($servername, $username, $password, $database, $port);
 
-      $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : 'DESC';
+      $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : 'ASC';
 
       $sql = "SELECT * FROM aktuality ORDER BY created_at $sortOrder;";
       $result = $conn->query($sql);
@@ -166,12 +168,12 @@ if (!isset($_SESSION['username'])) {
 
 
     </div>
-  
 
 
-  <div class="overlay" onclick="hideImage()">
-    <img src="" alt="Zvětšený obrázek">
-  </div>
+
+    <div class="overlay" onclick="hideImage()">
+      <img src="" alt="Zvětšený obrázek">
+    </div>
   </div>
 
 
@@ -181,7 +183,7 @@ if (!isset($_SESSION['username'])) {
         <img src="Images/logo.png" alt="" />
       </div>
       <div>
-        <h6>Kontakt</h6>
+        <h6 data-key="contact">Kontakt</h6>
         <ul>
           <li><strong>Telefon</strong></li>
           <li>+ 420 702 017 774</li>
@@ -191,7 +193,7 @@ if (!isset($_SESSION['username'])) {
         </ul>
       </div>
       <div>
-        <h6>Adresa</h6>
+        <h6 data-key="address">Adresa</h6>
         <ul>
           <li>Restaurace a Penzion "Refugio"</li>
           <li>Tisá 473</li>
@@ -199,77 +201,76 @@ if (!isset($_SESSION['username'])) {
         </ul>
       </div>
       <div>
-        <h6>Socialní sítě</h6>
-        <label for=""><i class="bx bxl-facebook-circle"></i></label>
-        <label for=""><i class="bx bxl-instagram"></i></label>
+        <h6 data-key="social_media">Sociální sítě</h6>
+        <label><i class="bx bxl-facebook-circle"></i></label>
+        <label><i class="bx bxl-instagram"></i></label>
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="translate.js">
 
-  <script>
-    const adminBtn = document.getElementById('adminBtn');
-    const loginFormWrapper = document.getElementById('loginFormWrapper');
-
-    adminBtn.addEventListener('click', () => {
-      loginFormWrapper.style.display = 'block';
-      document.body.style.overflow = 'hidden'; 
-    });
-
-    function closeLoginForm() {
-      loginFormWrapper.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    window.addEventListener('click', (event) => {
-      if (event.target === loginFormWrapper) {
-        closeLoginForm();
-      }
-    });
-
-
-    function changeSortOrder() {
-      // Získání aktuálního řazení z URL
-      var currentSortOrder = new URLSearchParams(window.location.search).get('sort');
-
-      // Určení nového řazení
-      var newSortOrder = (currentSortOrder === 'DESC') ? 'ASC' : 'DESC';
-
-      // Příprava nové URL s aktualizovaným řazením
-      var newUrl = window.location.pathname + '?sort=' + newSortOrder;
-
-      // Přesměrování na novou URL
-      window.location.href = newUrl;
-    }
-
-    // Funkce pro zobrazení zvětšeného obrázku
-    function showImage(element) {
-      var imageUrl = element.src;
-      var overlay = document.querySelector('.overlay');
-      var overlayImage = overlay.querySelector('img');
-
-      overlayImage.src = imageUrl;
-      overlay.style.display = 'block';
-    }
-
-    // Funkce pro skrytí zvětšeného obrázku
-    function hideImage() {
-      var overlay = document.querySelector('.overlay');
-      overlay.style.display = 'none';
-    }
   </script>
-  <script>
-function previewImage(event) {
+</body>
+<script>
+  const adminBtn = document.getElementById('adminBtn');
+  const loginFormWrapper = document.getElementById('loginFormWrapper');
+
+  adminBtn.addEventListener('click', () => {
+    loginFormWrapper.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeLoginForm() {
+    loginFormWrapper.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  window.addEventListener('click', (event) => {
+    if (event.target === loginFormWrapper) {
+      closeLoginForm();
+    }
+  });
+
+
+  function changeSortOrder() {
+    var currentSortOrder = new URLSearchParams(window.location.search).get('sort');
+
+    var newSortOrder = (currentSortOrder === 'DESC') ? 'ASC' : 'DESC';
+
+    var newUrl = window.location.pathname + '?sort=' + newSortOrder;
+
+    window.location.href = newUrl;
+  }
+
+  function showImage(element) {
+    var imageUrl = element.src;
+    var overlay = document.querySelector('.overlay');
+    var overlayImage = overlay.querySelector('img');
+
+    overlayImage.src = imageUrl;
+    overlay.style.display = 'block';
+  }
+
+  function hideImage() {
+    var overlay = document.querySelector('.overlay');
+    overlay.style.display = 'none';
+  }
+</script>
+<script>
+  function previewImage(event) {
     var input = event.target;
     var reader = new FileReader();
-    reader.onload = function(){
-        var dataURL = reader.result;
-        var imagePreview = document.getElementById('image-preview');
-        imagePreview.src = dataURL;
-        imagePreview.style.display = 'block';
+    reader.onload = function() {
+      var dataURL = reader.result;
+      var imagePreview = document.getElementById('image-preview');
+      imagePreview.src = dataURL;
+      imagePreview.style.display = 'block';
     };
     reader.readAsDataURL(input.files[0]);
-}
+  }
 </script>
+
 </body>
 
 </html>

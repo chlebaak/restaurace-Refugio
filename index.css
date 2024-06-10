@@ -9,56 +9,44 @@
 }
 body {
   min-height: 100vh;
-  overflow-x: hidden; /* zabrání horizontálnímu skrolování */
-
+  overflow-x: hidden;
 }
-
-
-
-[data-i18n] {
-  display: inline-block;
-}
-
 
 .hero {
   position: relative;
-  width: 100%; /* Šířka podle potřeby /* Výška podle potřeby */
+  width: 100%;
   min-height: 91%;
-  background-image: url("Images/green_kafe2.png"); /* Změňte cestu na skutečnou cestu k obrázku */
-  background-size: cover; /* Pokud chcete, aby se obrázek přizpůsobil velikosti divu */
-  background-position: center; /* Nastaví obrázek do středu */
+  background-image: url("Images/green_kafe2.png");
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 10ms ease; /* animace */
-
+  transition: transform 10ms ease;
 }
 
 .hero_content {
-  max-width: 80%; /* Maximální šířka obsahu */
-  text-align: center; /* Zarovnání obsahu do středu */
+  max-width: 80%;
+  text-align: center;
 }
 
 .hero_content img {
-  max-width: 100%; /* Obrázek se bude automaticky zmenšovat podle velikosti rodičovského prvku */
-  height: auto; /* Zachování poměru stran */
+  max-width: 100%;
+  height: auto;
 }
-
-
 
 .div2 {
   color: #80461b;
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #FAF0E6;
-
+  background-color: #faf0e6;
 }
 
-.opacity{
-  opacity: 1; 
-  transition: opacity 0.8s ease; 
+.opacity {
+  opacity: 1;
+  transition: opacity 0.8s ease;
   z-index: 2;
 }
 
@@ -82,7 +70,7 @@ body {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #FAF0E6;
+  background-color: #faf0e6;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   border-radius: 10px;
   margin: 2rem;
@@ -108,55 +96,6 @@ body {
   font-size: 16px;
 }
 
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-
-
-  .flex_container {
-    margin: 2rem;
-    width: auto;
-  }
-
-  .flex_container div {
-    font-size: 14;
-    margin: 1rem;
-    width: 21rem;
-    height: 14rem;
-  }
-
-
-}
-
-@media only screen and (max-width: 1000px){
-  .services_flex{
-    height: 800px;
-    flex-direction: column;
-  }
-
-  .services_flex .card{
-    width: 50%;
-    height: 50%;
-  }
-
-  .about-section{
-    padding: 0;
-  }
-
-  .about-content{
-    height: 100%;
-  }
-
-}
-
-
-
-
-
-
 .background {
   position: relative;
 }
@@ -175,81 +114,35 @@ body {
   z-index: 1;
 }
 
-footer {
-  background-color: #80461b;
-  color: #fff6ec;
-  border-top: 2px solid black;
-  width: 100%;
-}
-
-.footerCon {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  padding: 20px;
-  padding-top: 50px;
-}
-
-.footerCon div {
-  margin: 50px;
-  width: 170px;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-
-.footerCon div h6 {
-  border-bottom: 2px solid #fff6ec;
-  font-size: 30;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
-.footerCon div li {
-  margin: 3px;
-  list-style-type: none;
-}
-
-.footerCon div label {
-  color: FFF6EC;
-  font-size: 4rem;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.footerCon div img {
-  width: 170px;
-}
-
-.about-section{
+.about-section {
   color: #80461b;
   background-color: #fff6ec;
   padding: 100px;
 }
 
-.about-content{
+.about-content {
   display: flex;
   height: 70%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.about-content div{
+.about-content div {
   height: 100%;
   padding: 20px;
-  margin: 30px;
+  margin: 20px;
   z-index: 1;
 }
 
-.about-content .about-image{
+.about-content .about-image {
   border-radius: 10px;
   background-size: cover;
   background-position: center;
   width: 40%;
 }
 
-.about-content .about-text{
+.about-content .about-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -257,38 +150,31 @@ footer {
   width: 60%;
 }
 
-.about-content h2{
+.about-content h2 {
   padding-bottom: 30px;
-
 }
-
-
 
 .services_container {
   display: flex;
-  background-color: #FAF0E6;
+  background-color: #faf0e6;
   justify-content: center;
-  padding: 100px;
+  padding: 50px;
 }
 
 .services_flex {
-
   display: flex;
   flex-wrap: wrap;
   width: 90%;
   height: 500px;
   justify-content: center;
   align-items: center;
-
   z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   border-radius: 10px;
-
   overflow: hidden;
-
 }
 
-.services_flex .card{
+.services_flex .card {
   height: 100%;
   width: 25%;
   display: flex;
@@ -296,60 +182,164 @@ footer {
   align-items: center;
   text-align: center;
   color: white;
-  background-color: #FAF0E6;
-  background-size: cover; /* Pokud chcete, aby se obrázek přizpůsobil velikosti divu */
+  background-color: #faf0e6;
+  background-size: cover;
   background-position: center;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.services_flex .card:hover{
-
+.services_flex .card:hover {
   transform: scale(1.05);
   filter: brightness(120%);
 }
 
-.kontakt-section{
+.kontakt-section {
   color: #80461b;
+  height: 90%;
   background-color: #fff6ec;
   padding: 100px;
 }
 
-.kontakt-wrapper{
+.kontakt-wrapper {
   display: flex;
-  height: 70%;
+  height: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.kontakt-wrapper div{
+.kontakt-wrapper div {
   height: 100%;
   padding: 20px;
   margin: 30px;
   z-index: 1;
 }
 
-.kontakt-wrapper .kontakt-mapa{
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  width: 50%;
+.kontakt-wrapper .kontakt-mapa {
+  overflow: hidden;
+  width: 60%;
 }
 
-.kontakt-wrapper .kontakt-content{
+.kontakt-wrapper .kontakt-content {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  
-  width: 50%;
+
+  width: 40%;
 }
 
-.kontakt-wrapper h3{
+.kontakt-wrapper h3 {
   font-size: 30px;
   padding-bottom: 30px;
 }
 
+@media only screen and (max-width: 768px) {
+  .flex_container {
+    margin: 2rem;
+    width: auto;
+  }
 
+  .flex_container div {
+    font-size: 14;
+    margin: 1rem;
+    width: 21rem;
+    height: 14rem;
+  }
+
+  .about-section {
+    padding: 0px;
+  }
+  .about-content {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-content div {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .about-content .about-text {
+    width: 100%;
+  }
+
+  .about-content .about-image {
+    width: 100%;
+  }
+
+  .kontakt-section {
+    padding: 0px;
+  }
+
+  .kontakt-wrapper {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .kontakt-wrapper div {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .kontakt-wrapper .kontakt-content {
+    width: 100%;
+  }
+
+  .kontakt-wrapper .kontakt-mapa {
+    width: 100%;
+  }
+
+  .services_flex {
+    height: 650px;
+    flex-direction: column;
+  }
+
+  .services_flex .card {
+    width: 50%;
+    height: 50%;
+  }
+
+  .services_container {
+    display: flex;
+    background-color: #faf0e6;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .services_flex {
+    height: 650px;
+    flex-direction: column;
+  }
+
+  .services_flex .card {
+    width: 50%;
+    height: 50%;
+  }
+
+  .services_container {
+    display: flex;
+    background-color: #faf0e6;
+    justify-content: center;
+  }
+
+  .about-section {
+    padding: 50px;
+  }
+
+  .about-content {
+    font-size: 14px;
+  }
+
+  .kontakt-section {
+    padding: 50px;
+  }
+
+  .kontakt-wrapper {
+    font-size: 14px;
+  }
+}

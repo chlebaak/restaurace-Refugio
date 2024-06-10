@@ -1,19 +1,19 @@
-.opacity{
-  opacity: 1; 
-  transition: opacity 0.8s ease; 
+.opacity {
+  opacity: 1;
+  transition: opacity 0.8s ease;
   z-index: 1;
 }
 
 .hero {
   position: relative;
-  width: 100%; /* Šířka podle potřeby /* Výška podle potřeby */
+  width: 100%;
   min-height: 91%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url("Images/Untitled\ \(1\).png"); /* Změňte cestu na skutečnou cestu k obrázku */
-  background-size: cover; /* Pokud chcete, aby se obrázek přizpůsobil velikosti divu */
-  background-position: center; /* Nastaví obrázek do středu */
+  background-image: url("Images/Untitled\ \(1\).png");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero_content {
@@ -47,17 +47,17 @@
   .hero_content {
     margin: 150px 50px;
   }
-  .hero_content .info h2{
+  .hero_content .info h2 {
     font-size: 45px;
     line-height: 50px;
   }
 
-  .hero_content .info h2 span{
+  .hero_content .info h2 span {
     font-size: 40px;
     font-weight: 600;
   }
 
-  .hero_content .info p{
+  .hero_content .info p {
     font-size: 14px;
   }
 }
@@ -130,7 +130,7 @@
   border-radius: 10px;
 }
 
-.container_cena{
+.container_cena {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
@@ -158,8 +158,8 @@
 .content {
   color: #80461b;
   display: flex;
-  justify-content: center; /* zarovnání ve směru osy x (horizontální) */
-  align-items: center; /* zarovnání ve směru osy y (vertikální) */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -178,7 +178,7 @@
   font-size: 20px;
 }
 
-.container_slider{
+.container_slider {
   margin: 100px 0;
   display: flex;
   padding: 0 35px;
@@ -186,16 +186,16 @@
   justify-content: center;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   max-width: 1200px;
   position: relative;
 }
-.wrapper i{
+.wrapper i {
   top: 50%;
   height: 44px;
   width: 44px;
-  color: #343F4F;
+  color: #343f4f;
   cursor: pointer;
   font-size: 1.15rem;
   position: absolute;
@@ -206,61 +206,58 @@
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-.wrapper i:active{
+.wrapper i:active {
   transform: translateY(-50%) scale(0.9);
 }
-.wrapper i:hover{
+.wrapper i:hover {
   background: #f2f2f2;
 }
-.wrapper i:first-child{
+.wrapper i:first-child {
   left: -22px;
   display: none;
 }
-.wrapper i:last-child{
+.wrapper i:last-child {
   right: -22px;
 }
-.wrapper .carousel{
+.wrapper .carousel {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
 }
-.carousel.dragging{
+.carousel.dragging {
   cursor: grab;
   scroll-behavior: auto;
 }
-.carousel.dragging img{
+.carousel.dragging img {
   pointer-events: none;
 }
-.carousel img{
+.carousel img {
   height: 340px;
   object-fit: cover;
   user-select: none;
   margin-left: 14px;
   width: calc(100% / 3);
-  transition: transform 0.3s ease; /* Přidáme přechod pro plynulou změnu transformace */
+  transition: transform 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-
-
-  
 }
 
 .carousel img:hover {
-  transform: scale(1.05); /* Při najetí myší na obrázek zvětšíme jeho velikost o 5 % */
+  transform: scale(1.05);
 }
-.carousel img:first-child{
+.carousel img:first-child {
   margin-left: 0px;
 }
 
 @media screen and (max-width: 900px) {
-  .carousel img{
+  .carousel img {
     width: calc(100% / 2);
   }
 }
 
 @media screen and (max-width: 550px) {
-  .carousel img{
+  .carousel img {
     width: 100%;
   }
 }
@@ -276,7 +273,6 @@
   z-index: 9999;
 }
 
-/* Zvětšený obrázek */
 .overlay img {
   position: absolute;
   top: 50%;

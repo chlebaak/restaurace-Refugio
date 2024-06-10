@@ -1,291 +1,428 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubytování</title>
-  <link rel="stylesheet" href="ubytovani.css" />
-  <link rel="stylesheet" href="navbar.css" />
-  <link rel="stylesheet" href="footer.css" />
-  <link rel="icon" type="image/x-icon" href="Images/logo.png" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <script src="popup.js"></script>
-  <script src="slider.js" defer></script>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <meta charset="UTF-8" />
-  <meta name="description" content="Restaurace a ubytování Tisá Refugio" />
-  <meta name="keywords"
-    content="Refugio, restaurace Tisá, ubytování Tisá, kavárna Tisá, Refugio Tisá, krámek Tisá, horolezectví Tisá" />
-  <meta name="author" content="Jan Fiala" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Tinos&display=swap");
-  </style>
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubytování</title>
+    <link rel="stylesheet" href="ubytovani.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="popup.js"></script>
+    <script src="slider.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Restaurace a ubytování Tisá Refugio" />
+    <meta
+      name="keywords"
+      content="Refugio, restaurace Tisá, ubytování Tisá, kavárna Tisá, Refugio Tisá, krámek Tisá, horolezectví Tisá"
+    />
+    <meta name="author" content="Jan Fiala" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Tinos&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
       <div class="logo" data-key="logo">Refugio</div>
       <input type="checkbox" id="nav_check" hidden />
       <nav>
-          <ul>
-              <li>
-                  <a href="index.html" data-key="home">Hlavní stránka</a>
-              </li>
-              <li>
-                  <a href="restaurace.html" data-key="restaurant">Restaurace</a>
-              </li>
-              <li>
-                  <a href="ubytovani.html" class="active" data-key="accommodation">Ubytování</a>
-              </li>
-              <li>
-                  <a href="kramek.html" data-key="shop">Krámek</a>
-              </li>
-              <li>
-                  <a href="aktuality.php" data-key="news">Aktuality</a>
-              </li>
-              <li>
-                  <button id="change-lang">CZ/DE</button>
-              </li>
-          </ul>
+        <ul>
+          <li>
+            <a href="index.html" data-key="home">Hlavní stránka</a>
+          </li>
+          <li>
+            <a href="restaurace.html" data-key="restaurant">Restaurace</a>
+          </li>
+          <li>
+            <a href="ubytovani.html" class="active" data-key="accommodation"
+              >Ubytování</a
+            >
+          </li>
+          <li>
+            <a href="kramek.html" data-key="shop">Krámek</a>
+          </li>
+          <li>
+            <a href="aktuality.php" data-key="news">Aktuality</a>
+          </li>
+          <li>
+            <button id="change-lang">CZ/DE</button>
+          </li>
+        </ul>
       </nav>
       <label for="nav_check" class="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </label>
-  </header>
+    </header>
 
-  <div class="hero">
+    <div class="hero">
       <div class="hero_content">
-          <div class="info">
-              <h2 data-key="accommodation_title">Ubytování <br><span>v Refugiu</span></h2>
-              <p data-key="accommodation_description">Penzion REFUGIO se nachází v překrásné přírodě Labských pískovců na samotné hranici parku České Švýcarsko.
-                  Penzion leží přímo pod skalními masívy v obci Tisá. Nabízíme ubytování, kavárnu s nekuřáckou restaurací a
-                  outdoor shop, kde naleznete vše potřebné pro horolezectví, turistiku a veškeré aktivity v přírodě.<br></p>
-          </div>
+        <div class="info">
+          <h2 data-key="accommodation_title">
+            Ubytování <br /><span>v Refugiu</span>
+          </h2>
+          <p data-key="accommodation_description">
+            Penzion REFUGIO se nachází v překrásné přírodě Labských pískovců na
+            samotné hranici parku České Švýcarsko. Penzion leží přímo pod
+            skalními masívy v obci Tisá. Nabízíme ubytování, kavárnu s
+            nekuřáckou restaurací a outdoor shop, kde naleznete vše potřebné pro
+            horolezectví, turistiku a veškeré aktivity v přírodě.<br />
+          </p>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <div class="background">
+    <div class="background">
       <div class="kontejner">
-          <div class="opacity">
-              <h2 data-key="reservation">Rezervace</h2>
-              <p data-key="reservation_description">Pro rezervaci piště na <br> e-mail: <br> refugio@seznam.cz </p>
-          </div>
-          <div class="opacity">
-              <h2 data-key="price">Cena</h2>
-              <p data-key="price_description">Ceny pobytů uvedeny u jednotlivých pokojů.</p>
-          </div>
-          <div class="opacity">
-              <h2 data-key="deposit">Záloha</h2>
-              <p data-key="deposit_description">Nevratná záloha 50% z celkové ceny je splatná max. 30 dní před Vaším příjezdem.</p>
-          </div>
+        <div class="opacity">
+          <h2 data-key="reservation">Rezervace</h2>
+          <p data-key="reservation_description">
+            Pro rezervaci piště na <br />
+            e-mail: <br />
+            refugio@seznam.cz
+          </p>
+        </div>
+        <div class="opacity">
+          <h2 data-key="price">Cena</h2>
+          <p data-key="price_description">
+            Ceny pobytů uvedeny u jednotlivých pokojů.
+          </p>
+        </div>
+        <div class="opacity">
+          <h2 data-key="deposit">Záloha</h2>
+          <p data-key="deposit_description">
+            Nevratná záloha 50% z celkové ceny je splatná max. 30 dní před Vaším
+            příjezdem.
+          </p>
+        </div>
       </div>
 
       <div class="color">
-          <div class="content">
-              <div class="opacity">
-                  <h1 data-key="apartment">Apartmán</h1>
-              </div>
-              <div class="opacity">
-                  <p data-key="apartment_description">V nově zrekonstruovaném apartmánu Vám nabízíme dvě samostatné ložnice a možnost přistýlky na rozkládací
-                      pohovce, televizi, vybavenou kuchyňku, jídelní kout, samostatnou koupelnu s vanou i sprchovým koutem,
-                      toaletu, pračku.</p>
-              </div>
+        <div class="content">
+          <div class="opacity">
+            <h1 data-key="apartment">Apartmán</h1>
           </div>
-          <div class="container_slider">
-              <div class="wrapper opacity">
-                  <i id="left" class="fa-solid fa-angle-left"></i>
-                  <div class="carousel">
-                      <img src="Images/Ubytovani/a1.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a2.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a3.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a4.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a5.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a6.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/a7.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                  </div>
-                  <i id="right" class="fa-solid fa-angle-right"></i>
-              </div>
+          <div class="opacity">
+            <p data-key="apartment_description">
+              V nově zrekonstruovaném apartmánu Vám nabízíme dvě samostatné
+              ložnice a možnost přistýlky na rozkládací pohovce, televizi,
+              vybavenou kuchyňku, jídelní kout, samostatnou koupelnu s vanou i
+              sprchovým koutem, toaletu, pračku.
+            </p>
           </div>
-          <div class="flex">
-              <div class="opacity container_cena">
-                  <div class="flexbox">
-                      <div>
-                          <h3 data-key="price">Cena</h3>
-                          <p data-key="apartment_price">
-                              1 - 2 noci: 3 400 Kč/155€ noc <br>
-                              3 - 6 nocí: 3 200,-/ noc 139€ <br>
-                              7 a více nocí: 3 300,-/ noc 130€</p>
-                      </div>
-                      <div>
-                          <h3 data-key="extra_bed">Přistýlka</h3>
-                          <p data-key="apartment_extra_bed">
-                              1 - 2 noci: 350,-Kč <br>
-                              3 - 6 nocí: 320,-Kč <br>
-                              7 - více nocí: 290,-Kč</p>
-                      </div>
-                  </div>
-                  <div>
-                      <p data-key="spa_fee">Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€</p>
-                  </div>
-              </div>
+        </div>
+        <div class="container_slider">
+          <div class="wrapper opacity">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+              <img
+                src="Images/Ubytovani/a1.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a2.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a3.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a4.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a5.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a6.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/a7.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
           </div>
+        </div>
+        <div class="flex">
+          <div class="opacity container_cena">
+            <div class="flexbox">
+              <div>
+                <h3 data-key="price">Cena</h3>
+                <p data-key="apartment_price">
+                  1 - 2 noci: 3 400 Kč/155€ noc <br />
+                  3 - 6 nocí: 3 200,-/ noc 139€ <br />
+                  7 a více nocí: 3 300,-/ noc 130€
+                </p>
+              </div>
+              <div>
+                <h3 data-key="extra_bed">Přistýlka</h3>
+                <p data-key="apartment_extra_bed">
+                  1 - 2 noci: 350,-Kč <br />
+                  3 - 6 nocí: 320,-Kč <br />
+                  7 - více nocí: 290,-Kč
+                </p>
+              </div>
+            </div>
+            <div>
+              <p data-key="spa_fee">
+                Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="color" style="background: #FFF6EC">
-          <div class="content">
-              <div class="opacity">
-                  <h1 data-key="room_1">Pokoj č. 1</h1>
-              </div>
-              <div class="opacity">
-                  <p data-key="room_1_description">V pokoji se nachází dvojpostel, masivní palanda (možnost 2 přistýlek) televize, malá lednice, koupelna se
-                      sprchovým koutem a toaletou.</p>
-              </div>
+      <div class="color" style="background: #fff6ec">
+        <div class="content">
+          <div class="opacity">
+            <h1 data-key="room_1">Pokoj č. 1</h1>
           </div>
-          <div class="container_slider">
-              <div class="wrapper opacity">
-                  <i id="left" class="fa-solid fa-angle-left"></i>
-                  <div class="carousel">
-                      <img src="Images/Ubytovani/b1.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/b2.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/b3.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/b4.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/b5.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/b6.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                  </div>
-                  <i id="right" class="fa-solid fa-angle-right"></i>
-              </div>
+          <div class="opacity">
+            <p data-key="room_1_description">
+              V pokoji se nachází dvojpostel, masivní palanda (možnost 2
+              přistýlek) televize, malá lednice, koupelna se sprchovým koutem a
+              toaletou.
+            </p>
           </div>
-          <div class="flex">
-              <div style="background: #FAF0E6;" class="opacity container_cena">
-                  <div class="flexbox" style="background: #FAF0E6;">
-                      <div style="background: #FAF0E6;">
-                          <h3 data-key="price">Cena</h3>
-                          <p data-key="room_1_price"><strong>2 osoby/noc</strong><br>
-                              1 - 2 noci: 1 490,- Kč | 65€ <br>
-                              3 - 6 nocí: 1 400,- Kč | 61€ <br>
-                              7 - více nocí: 1 350,- Kč | 59€</p>
-                      </div>
-                      <div style="background: #FAF0E6;">
-                          <h3 data-key="extra_bed">Přistýlka</h3>
-                          <p data-key="room_1_extra_bed">
-                              1 - 2 noci: 350,-Kč <br>
-                              3 - 6 nocí: 320,-Kč <br>
-                              7 - více nocí: 290,-Kč</p>
-                      </div>
-                  </div>
-                  <div style="background: #FAF0E6;">
-                      <p data-key="spa_fee">Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€</p>
-                  </div>
-              </div>
+        </div>
+        <div class="container_slider">
+          <div class="wrapper opacity">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+              <img
+                src="Images/Ubytovani/b1.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/b2.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/b3.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/b4.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/b5.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/b6.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
           </div>
+        </div>
+        <div class="flex">
+          <div style="background: #faf0e6" class="opacity container_cena">
+            <div class="flexbox" style="background: #faf0e6">
+              <div style="background: #faf0e6">
+                <h3 data-key="price">Cena</h3>
+                <p data-key="room_1_price">
+                  <strong>2 osoby/noc</strong><br />
+                  1 - 2 noci: 1 490,- Kč | 65€ <br />
+                  3 - 6 nocí: 1 400,- Kč | 61€ <br />
+                  7 - více nocí: 1 350,- Kč | 59€
+                </p>
+              </div>
+              <div style="background: #faf0e6">
+                <h3 data-key="extra_bed">Přistýlka</h3>
+                <p data-key="room_1_extra_bed">
+                  1 - 2 noci: 350,-Kč <br />
+                  3 - 6 nocí: 320,-Kč <br />
+                  7 - více nocí: 290,-Kč
+                </p>
+              </div>
+            </div>
+            <div style="background: #faf0e6">
+              <p data-key="spa_fee">
+                Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="color">
-          <div class="content">
-              <div class="opacity">
-                  <h1 data-key="room_2">Pokoj č. 2</h1>
-              </div>
-              <div class="opacity">
-                  <p data-key="room_2_description">V pokoji se nachází dvojpostel, rozkládací gauč (možnost 1 přistýlky), televize, stůl a 2 židle, malá
-                      lednice, koupelna se sprchovým koutem a toaletou.</p>
-              </div>
+        <div class="content">
+          <div class="opacity">
+            <h1 data-key="room_2">Pokoj č. 2</h1>
           </div>
-          <div class="container_slider">
-              <div class="wrapper opacity">
-                  <i id="left" class="fa-solid fa-angle-left"></i>
-                  <div class="carousel">
-                      <img src="Images/Ubytovani/c1.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/c2.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/c3.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/c4.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                      <img src="Images/Ubytovani/c5.jpg" alt="img" draggable="false" onclick="showImage(this)">
-                  </div>
-                  <i id="right" class="fa-solid fa-angle-right"></i>
-              </div>
+          <div class="opacity">
+            <p data-key="room_2_description">
+              V pokoji se nachází dvojpostel, rozkládací gauč (možnost 1
+              přistýlky), televize, stůl a 2 židle, malá lednice, koupelna se
+              sprchovým koutem a toaletou.
+            </p>
           </div>
-          <div class="flex">
-              <div class="opacity container_cena">
-                  <div class="flexbox">
-                      <div>
-                          <h3 data-key="price">Cena</h3>
-                          <p data-key="room_2_price">
-                              <strong>2 osoby/noc</strong> <br>
-                              1 - 2 noci: 1 490,- Kč | 65€ <br>
-                              3 - 6 nocí: 1 400,- Kč | 61€ <br>
-                              7 - více nocí: 1 350,- Kč | 59€
-                          </p>
-                      </div>
-                      <div>
-                          <h3 data-key="extra_bed">Přistýlka</h3>
-                          <p data-key="room_2_extra_bed">
-                              1 - 2 noci: 350,-Kč <br>
-                              3 - 6 nocí: 320,-Kč <br>
-                              7 - více nocí: 290,-Kč</p>
-                      </div>
-                  </div>
-                  <div>
-                      <p data-key="spa_fee">Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€</p>
-                  </div>
-              </div>
+        </div>
+        <div class="container_slider">
+          <div class="wrapper opacity">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+              <img
+                src="Images/Ubytovani/c1.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/c2.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/c3.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/c4.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+              <img
+                src="Images/Ubytovani/c5.jpg"
+                alt="img"
+                draggable="false"
+                onclick="showImage(this)"
+              />
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
           </div>
+        </div>
+        <div class="flex">
+          <div class="opacity container_cena">
+            <div class="flexbox">
+              <div>
+                <h3 data-key="price">Cena</h3>
+                <p data-key="room_2_price">
+                  <strong>2 osoby/noc</strong> <br />
+                  1 - 2 noci: 1 490,- Kč | 65€ <br />
+                  3 - 6 nocí: 1 400,- Kč | 61€ <br />
+                  7 - více nocí: 1 350,- Kč | 59€
+                </p>
+              </div>
+              <div>
+                <h3 data-key="extra_bed">Přistýlka</h3>
+                <p data-key="room_2_extra_bed">
+                  1 - 2 noci: 350,-Kč <br />
+                  3 - 6 nocí: 320,-Kč <br />
+                  7 - více nocí: 290,-Kč
+                </p>
+              </div>
+            </div>
+            <div>
+              <p data-key="spa_fee">
+                Lázeňský poplatek z pobytu/dospělý: 38,-/noc 1,50€
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <div class="overlay" onclick="hideImage()">
-      <img src="" alt="Zvětšený obrázek">
-  </div>
-  <script>
+    <div class="overlay" onclick="hideImage()">
+      <img src="" alt="Zvětšený obrázek" />
+    </div>
+    <script>
       function showImage(element) {
-          var imageUrl = element.src;
-          var overlay = document.querySelector('.overlay');
-          var overlayImage = overlay.querySelector('img');
+        var imageUrl = element.src;
+        var overlay = document.querySelector(".overlay");
+        var overlayImage = overlay.querySelector("img");
 
-          overlayImage.src = imageUrl;
-          overlay.style.display = 'block';
+        overlayImage.src = imageUrl;
+        overlay.style.display = "block";
       }
 
       function hideImage() {
-          var overlay = document.querySelector('.overlay');
-          overlay.style.display = 'none';
+        var overlay = document.querySelector(".overlay");
+        overlay.style.display = "none";
       }
-  </script>
+    </script>
 
-  <footer>
+    <footer>
       <div class="footerCon">
-          <div>
-              <img src="Images/logo.png" alt="" />
-          </div>
-          <div>
-              <h6 data-key="contact">Kontakt</h6>
-              <ul>
-                  <li><strong>Telefon</strong></li>
-                  <li>+ 420 702 017 774</li>
-                  <li>+ 420 724 166 693</li>
-                  <li><strong>E-mail</strong></li>
-                  <li>refugio@seznam.cz</li>
-              </ul>
-          </div>
-          <div>
-              <h6 data-key="address">Adresa</h6>
-              <ul>
-                  <li>Restaurace a Penzion "Refugio"</li>
-                  <li>Tisá 473</li>
-                  <li>403 36 Tisá</li>
-              </ul>
-          </div>
-          <div>
-              <h6 data-key="social_media">Sociální sítě</h6>
-              <label><i class="bx bxl-facebook-circle"></i></label>
-              <label><i class="bx bxl-instagram"></i></label>
-          </div>
+        <div>
+          <img src="Images/logo.png" alt="" />
+        </div>
+        <div>
+          <h6 data-key="contact">Kontakt</h6>
+          <ul>
+            <li><strong>Telefon</strong></li>
+            <li>+ 420 702 017 774</li>
+            <li>+ 420 724 166 693</li>
+            <li><strong>E-mail</strong></li>
+            <li>refugio@seznam.cz</li>
+          </ul>
+        </div>
+        <div>
+          <h6 data-key="address">Adresa</h6>
+          <ul>
+            <li>Restaurace a Penzion "Refugio"</li>
+            <li>Tisá 473</li>
+            <li>403 36 Tisá</li>
+          </ul>
+        </div>
+        <div>
+          <h6 data-key="social_media">Sociální sítě</h6>
+          <label><i class="bx bxl-facebook-circle"></i></label>
+          <label><i class="bx bxl-instagram"></i></label>
+        </div>
       </div>
-  </footer>
-  <script src="opacity.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="translate.js"></script>
-</body>
+    </footer>
+    <script src="opacity.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="translate.js"></script>
+  </body>
 </html>
